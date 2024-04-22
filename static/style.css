@@ -1,0 +1,137 @@
+/* Default styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: white; /* Default background color */
+  color: black; /* Default text color */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  color: skyblue;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #666;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+a:hover {
+  background-color: #0056b3;
+}
+
+.secondary-link {
+  color: white;
+}
+
+.container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+input[type="email"],
+input[type="password"],
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px; /* Adjusted margin to create space between elements */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.link {
+  text-decoration: none;
+  color: #FFFFFF;
+  display: block;
+  text-align: center;
+}
+
+.return {
+  display: block;
+  text-align: left;
+  vertical-align: top;
+}
+
+.box h2 {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.box ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+    color: white;
+  }
+}
+
+/* Light mode */
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: white;
+    color: black;
+  }
+}

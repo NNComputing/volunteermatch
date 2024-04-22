@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+</head>
+<body>
+    <h1>User Dashboard</h1>
+    <p>Welcome Back, {{ user }}</p>
+    <p>Upcoming Events:</p>
+    <ul>
+        {% for event in upcoming_events %}
+            <li>{{ event.name }} - {{ event.date }}</li>
+        {% endfor %}
+    </ul>
+    <p>Your Rating: {{ user_rating }}</p>
+    <p>Reflections:</p>
+    <ul>
+        {% for reflection in reflections %}
+            <li>{{ reflection }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('opportunities') }}">opportunities</a>
+    <a href="{{ url_for('logout') }}">Logout</a>
+    <a href="{{ url_for('skills') }}">Skills</a>
+</body>
+</html>

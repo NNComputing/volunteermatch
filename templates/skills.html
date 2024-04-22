@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleDialectCheckboxes() {
+            var dialectCheckbox = document.getElementById("dialects");
+            var dialectCheckboxes = document.getElementsByClassName("dialect-checkboxes");
+
+            for (var i = 0; i < dialectCheckboxes.length; i++) {
+                if (dialectCheckbox.checked) {
+                    dialectCheckboxes[i].style.display = "block";
+                } else {
+                    dialectCheckboxes[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <a href="/user_dashboard">Return to dashboard</a>
+    <h1>Select Your Skills</h1>
+    <form action="/add_skills" method="post">
+        <label><input type="checkbox" name="skill" value="outspoken"> Outspoken</label><br>
+        <label><input type="checkbox" name="skill" value="teamwork"> teamwork</label><br>
+        <label><input type="checkbox" name="skill" value="empathetic"> empathetic</label><br>
+        <label><input type="checkbox" id="dialects" onchange="toggleDialectCheckboxes()"> dialects</label><br>
+        <div class="dialect-checkboxes" style="display: none;">
+            <label><input type="checkbox" name="skill" value="hdia">hokkien</label><br>
+            <label><input type="checkbox" name="skill" value="tdia">teochew</label><br>
+            <label><input type="checkbox" name="skill" value="cdia">cantonese</label><br>
+            <label><input type="checkbox" name="skill" value="hnndia"> hainanese</label><br>
+            <label><input type="checkbox" name="skill" value="hkdia">hakka</label><br>
+        </div>
+        <label><input type="checkbox" name="skill" value="1aid">first-aid</label><br>
+        <label><input type="checkbox" name="skill" value="kid">kid</label><br>
+        <label><input type="checkbox" name="skill" value="patient"> patience</label><br>
+        <label><input type="checkbox" name="skill" value="create"> creativity</label><br>
+        <!-- Add more skills as needed -->
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
